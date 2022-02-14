@@ -9,6 +9,6 @@ fiftyNumbers = [x for x in range(-50, 51) if x % 2 == 0]
 quadratZahlen = [x * x for x in range(-9, 10)]
 # bis 6 weil die 6te Zahl nicht existiert in dieser Liste
 # https://stackoverflow.com/a/1361789/5896378
-equation = [2 * math.copysign(math.pow(abs(x), 2), x) -
+equation = [2 * x**2 -
             4*x + 6 for x in range(-5, 6)]
 print(equation)
