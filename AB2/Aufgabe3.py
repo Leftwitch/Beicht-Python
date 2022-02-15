@@ -23,14 +23,8 @@ def erstelleSpielkonstellationen2(player_count):
             current_player_index += 1
 
         # Wenn wir nicht selbst der Spieler sind, dann Spielkonstellation hinzufügen
-        if current_player_index != opponent_index:
-            # Hier beide möglichkeiten erzeugen
-            element1 = [current_player_index+1, opponent_index+1],
-            element2 = [opponent_index+1, current_player_index+1]
-
-            # Wenn die Konstellation noch nicht vorhanden ist, dann hinzufügen
-            if element1 not in result and element2 not in result:
-                result.append([current_player_index+1, opponent_index+1])
+        if current_player_index != opponent_index and opponent_index > current_player_index:
+            result.append([current_player_index+1, opponent_index+1])
 
         # Zähler für den nächsten Spieler erhöhen
         current_player += 1
